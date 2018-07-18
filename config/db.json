@@ -1,0 +1,41 @@
+{
+  "mysql": {
+    "dev": {
+      "host": "127.0.0.1",
+      "port": "3306",
+      "user": "root",
+      "password": "wc45612301",
+      "database": "onestory"
+    },
+    "test": {
+      "host": "123.56.28.235",
+      "port": "3307",
+      "user": "markzhang",
+      "password": "markzhang90",
+      "database": "onestory"
+    },
+    "online": {
+      "host": "123.56.28.235",
+      "port": "3307",
+      "user": "markzhang",
+      "password": "markzhang90",
+      "database": "onestory"
+    }
+  },
+  "redis": {
+    "dev": {
+      "host": "47.100.122.131",
+      "port": "6379"
+    },
+    "test": {
+      "host": "r-uf6040acb127da94.redis.rds.aliyuncs.com",
+      "port": "6379",
+      "password": "Buzhongyao123"
+    },
+    "online": {
+      "host": "r-uf68469877d0c7b4.redis.rds.aliyuncs.com",
+      "port": "6379",
+      "password": "Buzhongyao123"
+    }
+  }
+}

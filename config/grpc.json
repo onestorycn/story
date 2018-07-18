@@ -1,0 +1,22 @@
+{
+  "device" :{
+    "dev":{
+      "host" : "192.168.2.223:30023",
+      "service_name" : "whale.device.proto",
+      "init" : 1,
+      "capacity" : 100
+    },
+    "test":{
+      "host" : "mango-device:50051",
+      "service_name" : "whale.device.proto",
+      "init" : 1,
+      "capacity" : 100
+    },
+    "online":{
+      "host" : "192.168.2.223:30023",
+      "service_name" : "whale.device.proto",
+      "init" : 1,
+      "capacity" : 100
+    }
+  },
+}
