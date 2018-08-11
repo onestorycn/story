@@ -6,6 +6,7 @@ import (
 	"story/grpc/handler"
 	"github.com/micro/go-grpc"
 	posts "story/grpc/proto/posts"
+	story "story/grpc/proto/story"
 	"context"
 	"github.com/micro/go-micro/server"
 	"account/library/logger"
@@ -27,6 +28,7 @@ func main() {
 
 	// Register Handler
 	posts.RegisterPostsServiceHandler(service.Server(), new(handler.Posts))
+	story.RegisterStoryServiceHandler(service.Server(), new(handler.Story))
 
 	// Run service
 	if err := service.Run(); err != nil {

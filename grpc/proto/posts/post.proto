@@ -1,5 +1,5 @@
 syntax = "proto3";
-package onestory.story.proto;
+package onestory.post.proto;
 
 service PostsService {
     rpc InsertPostsInfo (Request) returns (ResponseSafe) {}
