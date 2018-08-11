@@ -1,0 +1,73 @@
+syntax = "proto3";
+package onestory.post.proto;
+
+service PostsService {
+    rpc InsertPostsInfo (Request) returns (ResponseSafe) {}
+    rpc UpdatePostsInfo (Request) returns (Response) {}
+    rpc GetPostsList (RequestQuery) returns (ResponseList) {}
+    rpc GetPostById (RequestQuerySingle) returns (ResponseSafe) {}
+}
+
+message FullPost {
+   int64 Id = 1;
+   int64 StoryId = 2;
+   string PassId = 3;
+   int64 Uid = 4;
+   string Header = 5;
+   string Rel = 6;
+   string Content = 7;
+   string Ext = 8;
+   int64 Update_time = 9;
+   int64 Create_time = 10;
+}
+
+message SafePost {
+   int64 Id = 1;
+   int64 StoryId = 2;
+   string PassId = 3;
+   string Header = 5;
+   string Rel = 6;
+   string Content = 7;
+   string Ext = 8;
+   int64 Update_time = 9;
+   int64 Create_time = 10;
+   int64 Create_date = 11;
+}
+
+message RequestQuerySingle {
+   int64 Id = 1;
+   string PassId = 2;
+   string StoryId = 3;
+}
+
+message RequestQuery {
+   string PassId = 1;
+   int64 StoryId = 2;
+   int64 startTime = 3;
+   int64 endTime = 4;
+   bool isDesc = 5;
+   int64 limit = 6;
+   int64 page = 7;
+}
+
+message Request {
+    FullPost Info = 1;
+}
+
+message Response {
+    int64 Code = 1;
+    string Message = 2;
+    string Data = 3;
+}
+message ResponseList {
+    int64 Code = 1;
+    string Message = 2;
+    repeated SafePost List = 3;
+   int64 limit = 4;
+   int64 page = 5;
+}
+message ResponseSafe {
+    int64 Code = 1;
+    string Message = 2;
+    SafePost Data = 3;
+}
